@@ -1,0 +1,150 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    color: white;
+    overflow: hidden;
+}
+
+.container {
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url('pubg.jpg') no-repeat center center/cover;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.navbar img {
+    width: 250px;
+    height: 70px;
+}
+
+.navbar .nav-links {
+    display: flex;
+    gap: 10px;
+}
+
+.navbar a {
+    color: white;
+    padding: 14px 20px;
+    text-decoration: none;
+    text-align: center;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+    border-radius: 25px;
+}
+
+.content {
+    margin: 5%;
+    position: absolute;
+    top: 50%;
+    left: 46%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.content h1 {
+    margin: 20px;
+    font-family: inherit;
+    padding-top: 30px;
+    text-align: center;
+    font-size: 120px;
+    font-weight: 900;
+    color: #fff;
+    letter-spacing: 30px;
+    position: relative;
+    line-height: 1.2;
+}
+
+.content p {
+    justify-content: left;
+    font-size: 1.5em;
+    margin: 20px 0;
+}
+
+.content .buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.content .buttons a {
+    background: white;
+    color: black;
+    padding: 14px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+/* Media Queries */
+
+/* Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar img {
+        width: 150px;
+        height: 40px;
+    }
+    .navbar .nav-links {
+        flex-direction: column;
+    }
+    .content h1 {
+        font-size: 60px;
+    }
+    .content p {
+        font-size: 1em;
+    }
+}
+
+/* Medium devices (tablets, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .navbar {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .navbar img {
+        width: 200px;
+        height: 50px;
+    }
+    .content h1 {
+        font-size: 80px;
+    }
+    .content p {
+        font-size: 1.2em;
+    }
+}
+
+/* Large devices (desktops, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .content h1 {
+        font-size: 100px;
+    }
+    .content p {
+        font-size: 1.5em;
+    }
+}
+
+/* Extra large devices (large desktops, 992px and up) */
+@media (min-width: 992px) {
+    .content h1 {
+        font-size: 120px;
+    }
+    .content p {
+        font-size: 1.5em;
+    }
+}
