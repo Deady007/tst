@@ -1,0 +1,168 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: 'Roboto', sans-serif; /* Luxurious font */
+    color: #f0f0f0; /* Soft white for text */
+    overflow: hidden;
+    background-color: #0b0b0b; /* Dark background for depth */
+}
+
+.container {
+    display: flex; /* Use flex for centering */
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: url('pubg.jpg') no-repeat center center/cover; /* Background image */
+    filter: brightness(0.8); /* Darken background for text readability */
+}
+
+/* Updated navbar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px; /* Spacious padding */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    border-bottom: 2px solid #f0f0f0; /* Elegant border */
+    position: fixed; /* Fix the navbar to the top */
+    top: 0; /* Position at the top */
+    left: 0; /* Align to the left */
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensure it sits above other content */
+}
+
+/* Adjust content to avoid overlapping with the navbar */
+.content {
+    position: absolute; /* Keep it absolute to center */
+    top: 50%; /* Center vertically */
+    left: 50%; /* Center horizontally */
+    transform: translate(-50%, -50%); /* Center adjustment */
+    text-align: center; /* Center text */
+    padding: 20px; /* Add padding */
+    margin-top: 100px; /* Add top margin to avoid navbar overlap */
+}
+
+.navbar img {
+    width: 250px; /* Logo size */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.navbar .nav-links {
+    display: flex;
+    gap: 20px; /* More spacious gap between links */
+}
+
+.navbar a {
+    color: #f0f0f0; /* Text color */
+    padding: 10px 20px; /* More padding for links */
+    text-decoration: none; /* Remove underline */
+    border-radius: 25px; /* Rounded edges */
+    transition: background 0.3s, color 0.3s; /* Smooth transitions */
+}
+
+.navbar a:hover {
+    background-color: #f0f0f0; /* Light background on hover */
+    color: #333; /* Dark text on hover */
+}
+
+
+.content h1 {
+    margin: 20px 0; /* Margin around heading */
+    font-size: 70px; /* Large heading size */
+    font-weight: 900; /* Bold weight */
+    color: #f0f0f0; /* White color for heading */
+    letter-spacing: 5px; /* Letter spacing for elegance */
+    line-height: 1.2; /* Line height for readability */
+    text-transform: uppercase; /* Uppercase for premium feel */
+}
+
+.content p {
+    font-size: 1.2em; /* Slightly larger paragraph size */
+    margin: 10px 0; /* Margin around paragraph */
+    color: #dcdcdc; /* Slightly lighter text for contrast */
+    max-width: 800px; /* Limit width for better readability */
+}
+
+.content .buttons {
+    display: flex; /* Flexbox for buttons */
+    justify-content: center; /* Center buttons */
+    gap: 20px; /* Spacious gap between buttons */
+}
+
+.content .buttons a {
+    background: #f0f0f0; /* Light button background */
+    color: #333; /* Dark text color */
+    padding: 12px 30px; /* Ample padding for buttons */
+    text-decoration: none; /* Remove underline */
+    border-radius: 5px; /* Slightly rounded edges */
+    transition: background 0.3s, transform 0.3s; /* Smooth transitions */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.content .buttons a:hover {
+    background: #e0e0e0; /* Darken button background on hover */
+    transform: translateY(-2px); /* Lift effect on hover */
+}
+
+/* Media Queries */
+
+/* Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .navbar {
+        flex-direction: column; /* Stack navbar items */
+        align-items: center; /* Center navbar items */
+        padding: 15px; /* Adjust padding */
+    }
+    .navbar img {
+        width: 150px; /* Smaller logo */
+    }
+    .navbar .nav-links {
+        flex-direction: column; /* Stack links */
+    }
+    .content h1 {
+        font-size: 40px; /* Smaller heading size */
+    }
+    .content p {
+        font-size: 1em; /* Smaller paragraph size */
+    }
+}
+
+/* Medium devices (tablets, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .navbar {
+        flex-direction: row; /* Horizontal layout */
+    }
+    .navbar img {
+        width: 200px; /* Adjust logo size */
+    }
+    .content h1 {
+        font-size: 50px; /* Smaller heading size */
+    }
+    .content p {
+        font-size: 1.1em; /* Slightly smaller paragraph size */
+    }
+}
+
+/* Large devices (desktops, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .content h1 {
+        font-size: 60px; /* Adjust heading size */
+    }
+    .content p {
+        font-size: 1.2em; /* Adjust paragraph size */
+    }
+}
+
+/* Extra large devices (large desktops, 992px and up) */
+@media (min-width: 992px) {
+    .content h1 {
+        font-size: 70px; /* Adjust heading size */
+    }
+    .content p {
+        font-size: 1.3em; /* Adjust paragraph size */
+    }
+}

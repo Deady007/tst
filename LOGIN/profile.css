@@ -1,0 +1,95 @@
+/* Reset some default styles */
+body, h2, p {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif; /* You can replace this with a more elegant font */
+}
+
+/* Body styles */
+body {
+    background-color: #f4f4f4; /* Light background for contrast */
+    color: #333; /* Dark text color */
+}
+
+/* Profile container */
+.profile-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #ffffff; /* White background for profile */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    border-radius: 8px; /* Rounded corners */
+}
+
+/* Profile header */
+.profile-container h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Profile photo styling */
+.profile-photo {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-photo img {
+    width: 150px; /* Fixed size for the profile photo */
+    height: 150px; /* Fixed size for the profile photo */
+    border-radius: 50%; /* Circular profile photo */
+    object-fit: cover; /* Crop to fit */
+    border: 2px solid #d4af37; /* Gold border */
+}
+
+/* Profile details */
+.profile-details {
+    margin: 20px 0;
+}
+
+.profile-details p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+/* Buttons */
+.update-btn, .dashboard-btn {
+    display: inline-block;
+    margin: 20px 10px; /* Spacing between buttons */
+    padding: 12px 20px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #d4af37; /* Gold background */
+    color: white; /* White text */
+    border-radius: 5px; /* Rounded corners */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.update-btn:hover, .dashboard-btn:hover {
+    background-color: #c39c32; /* Darker gold on hover */
+}
+
+/* Footer styles */
+.profile-footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #666; /* Lighter text for footer */
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .profile-container {
+        padding: 20px; /* Reduce padding on smaller screens */
+    }
+
+    .profile-photo img {
+        width: 120px; /* Smaller photo for mobile */
+        height: 120px; /* Smaller photo for mobile */
+    }
+
+    .update-btn, .dashboard-btn {
+        padding: 10px 15px; /* Smaller button size */
+    }
+}

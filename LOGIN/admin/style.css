@@ -1,0 +1,60 @@
+/* Reset some default styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5; /* Light gray background */
+}
+
+/* Header styles */
+h1 {
+    text-align: center;
+    color: #333;
+    margin-top: 20px;
+}
+
+/* Table styles */
+table {
+    width: 90%; /* Set to 90% for better responsiveness */
+    margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+thead {
+    background-color: #2196F3; /* Blue background */
+    color: white;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+/* Styling for body rows */
+tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* Light gray for even rows */
+}
+
+tbody tr:hover {
+    background-color: #e1f5fe; /* Light blue on hover */
+}
+
+/* Action link styles */
+a {
+    color: #f44336; /* Red color for delete links */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* No tournaments message */
+p {
+    text-align: center;
+    color: #666; /* Subtle text color for empty state */
+    font-size: 18px;
+}
