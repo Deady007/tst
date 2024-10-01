@@ -45,7 +45,9 @@ $result = $conn->query($sql);
 </head>
 <body>
     <header>
-        <img src="logo.png" alt="Lysto.gg Logo" class="logo">
+    <a href="../dashboard.php">
+    <img src="logo.png" alt="fURIOUS EsPORTS Logo" class="logo">
+</a>
     </header>
     <main class="tournament-grid">
         <?php

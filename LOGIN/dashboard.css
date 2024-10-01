@@ -25,7 +25,7 @@ body, html {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 40px; /* Spacious padding */
+    padding: 20px 6px; /* Spacious padding */
     background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
     border-bottom: 2px solid #f0f0f0; /* Elegant border */
     position: fixed; /* Fix the navbar to the top */

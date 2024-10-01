@@ -59,7 +59,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <!DOCTYPE html>
 <html lang="en">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="team.css">
+    <a href="dashboard.php">
+    <img src="logo.png" alt="fURIOUS EsPORTS Logo" class="logo">
+</a>
+
 <head>
     <meta charset="UTF-8">
     <title>Join Team</title>

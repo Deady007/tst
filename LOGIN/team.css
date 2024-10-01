@@ -1,0 +1,118 @@
+/* Body styling for a premium look */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif; /* Luxury, modern font */
+    background-color: #0b0b0b; /* Dark background for elegance */
+    color: #f0f0f0; /* Light text for contrast */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    color: #ffcc00; /* Gold color for a premium touch */
+}
+
+/* Logo styling */
+.logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 150px;
+    height: auto;
+    cursor: pointer;
+}
+
+/* Form container for central alignment */
+form {
+    background: rgba(255, 255, 255, 0.1); /* Semi-transparent for modern look */
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
+    width: 300px;
+    text-align: center;
+}
+
+/* Invite code label styling */
+label {
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: 10px;
+    letter-spacing: 0.05rem;
+    color: #f0f0f0; /* Light text */
+}
+
+/* Input field styling */
+input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    background-color: #1f1f1f; /* Dark input background */
+    color: #fff;
+    margin-bottom: 20px;
+    font-size: 1rem;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Input field focus effect */
+input[type="text"]:focus {
+    outline: none;
+    border: 2px solid #ffcc00; /* Gold outline on focus */
+}
+
+/* Button styling */
+button {
+    padding: 12px 20px;
+    background-color: #ffcc00; /* Premium gold color */
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    cursor: pointer;
+    color: #333; /* Dark text on gold background */
+    width: 100%;
+    transition: background-color 0.3s, transform 0.3s;
+    box-shadow: 0 4px 15px rgba(255, 204, 0, 0.3);
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #e6b800; /* Darker gold on hover */
+    transform: translateY(-2px); /* Subtle lift effect */
+}
+
+/* Error or success message */
+p {
+    margin-top: 20px;
+    color: #ffcc00; /* Gold for success messages */
+    font-size: 1.1rem;
+    text-align: center;
+}
+
+/* Responsive design for small screens */
+@media (max-width: 576px) {
+    form {
+        width: 90%; /* Responsive form width */
+        padding: 30px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    button {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+}

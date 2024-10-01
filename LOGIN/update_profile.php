@@ -61,18 +61,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     exit();
 }
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Complete Profile</title>
-    <link rel="stylesheet" href="profile.css">
+    <link rel="stylesheet" href="update.css">
 </head>
 <body>
     <div class="container">
         <h2>Complete Your Profile</h2>
+        <!-- Profile photo preview -->
+        <img id="profile_photo_preview" alt="Profile Photo Preview">
+        
         <form method="POST" action="" enctype="multipart/form-data">
             <label for="profile_photo">Profile Photo:</label>
             <input type="file" id="profile_photo" name="profile_photo">
@@ -117,5 +119,21 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <button type="submit">Save Profile</button>
         </form>
     </div>
+
+    <script>
+        // Script for handling profile photo preview
+        document.getElementById("profile_photo").addEventListener("change", function(event) {
+            const file = event.target.files[0];
+            if (file) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    const preview = document.getElementById("profile_photo_preview");
+                    preview.src = e.target.result;
+                    preview.style.display = "block";
+                }
+                reader.readAsDataURL(file);
+            }
+        });
+    </script>
 </body>
 </html>
