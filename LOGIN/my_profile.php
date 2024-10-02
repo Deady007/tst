@@ -4,7 +4,7 @@ include 'config.php'; // Database connection
 
 // Check if the user is logged in
 if (!isset($_SESSION['email'])) {
-    header("Location: login_form,php"); // Redirect to login page if not logged in
+    header("Location: login_form.php"); // Redirect to login page if not logged in
     exit();
 }
 
@@ -17,6 +17,7 @@ $result = $query->get_result();
 
 if ($result->num_rows > 0) {
     $user = $result->fetch_assoc();
+    $userType = $user['user_type'];
 } else {
     echo "User not found!";
     exit();
@@ -37,8 +38,8 @@ if ($result->num_rows > 0) {
 <body>
 
     <div class="profile-container">
-    <a href="dashboard.php" class="dashboard-btn">Dashboard</a>
-        <h2>Profile</h2> <!-- Updated header -->
+        <a href="dashboard.php" class="dashboard-btn">Dashboard</a>
+        <h2>Profile</h2>
         <div class="profile-photo">
             <?php if (!empty($user['profile_photo'])): ?>
                 <img src="<?php echo htmlspecialchars($user['profile_photo']); ?>" alt="Profile Photo">
@@ -60,7 +61,11 @@ if ($result->num_rows > 0) {
             <p><strong>Playing Since:</strong> <?php echo htmlspecialchars($user['playing_since']); ?></p>
         </div>
         
-        <a href="update_profile.php" class="update-btn">Update My Profile</a>
+        <!-- Show the Update button only if the logged-in user is viewing their own profile -->
+        <?php if ($email == $_SESSION['email'] && $userType == 'player') { ?>
+            <a href="update_profile.php" class="update-btn">Update My Profile</a>
+        <?php } ?>
+        
     </div>
 
     <!-- Footer with account created and updated info -->

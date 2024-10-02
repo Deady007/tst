@@ -28,11 +28,10 @@ $result = $stmt->get_result();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Your Teams</title>
-    <a href="dashboard.php">
-    <img src="logo.png" alt="fURIOUS EsPORTS Logo" class="logo"></a>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap">
     <style>
         body {
-            font-family: 'Arial', sans-serif;
+            font-family: 'Roboto', sans-serif;
             background-color: #f8f9fa;
             margin: 0;
             padding: 0;
@@ -85,6 +84,7 @@ $result = $stmt->get_result();
             background-color: #e9ecef;
             padding: 10px;
             border-radius: 6px;
+            margin-bottom: 10px;
         }
 
         .team-item button {
@@ -113,10 +113,29 @@ $result = $stmt->get_result();
             color: #007bff;
         }
 
+        .logo-container {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .logo {
+            width: 150px;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .logo:hover {
+            transform: scale(1.05);
+        }
     </style>
 </head>
 <body>
     <div class="container">
+        <div class="logo-container">
+            <a href="dashboard.php">
+                <img src="LOGO1.png" alt="fURIOUS EsPORTS Logo" class="logo">
+            </a>
+        </div>
         <h1>Your Teams</h1>
         <ol>
             <?php

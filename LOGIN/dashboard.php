@@ -52,12 +52,10 @@ if ($result->num_rows > 0) {
     <?php if ($userType == 'player') { ?>
         <a href="my_profile.php">My Profile</a>
         <a href="join_team.php">Join Team</a>
-        <a href="achievements.php">Achievements</a>
     <?php } ?>
     <?php if ($userType == 'team_manager') { ?>
         <a href="create_team.php">Create Team</a>
         <a href="my_team.php">My Team</a>
-        <a href="my_achievements.php">Achievements</a>
         <a href="my_tournaments.php">My Tournaments</a>
     <?php } ?>
     <?php if ($userType == 'organizer') { ?>
