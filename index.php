@@ -11,7 +11,7 @@
         <div class="navbar">
             <img src="logo.png" alt="Logo">
             <div class="nav-links">
-                <a href="index.html">Home</a>
+                <a href="index.php">Home</a>
                 <a href="tournament/index.php">Tournaments</a>
                 <a href="#teams">Teams</a>
                 <a href="#players">Players</a>
